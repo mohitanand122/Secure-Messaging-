@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://wallpapercave.com/wp/wp6752174.jpg");
+    font-family: Arial, sans-serif;
+}
+
+/* Updated status class to center text over the ring */
+.status {
+    font-size: 1.5rem; /* Increased font size */
+    color: #999; /* Initial color for connecting */
+    position: absolute; /* Absolute positioning for centering */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by half width and height */
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.vpn-image {
+    position: relative; /* Normal flow of the document */
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 2rem; /* Space above the image */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Circular ring animation */
+.ring {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 200px; /* Increased size */
+    height: 200px; /* Increased size */
+    border: 10px solid rgba(69, 162, 71, 0.5); /* Semi-transparent green */
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Center the ring */
+    animation: pulse 2s infinite; /* Pulse animation */
+    z-index: -1; /* Behind the status text */
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.5; /* Fade effect */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: 15rem; /* Spacing above the buttons */
+    margin-bottom: -4rem;
+    width: 100%; /* Ensure it takes full width for alignment */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 350px; /* Match the width of the vpn-container */
+
+}
+
+.btn {
+    width: 45%; /* Buttons occupy equal space */
+    padding: 0.6rem;
+    margin-left: 28%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Styles for side container */
+.side-container {
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-end; /* Align chat input to the bottom */
+    border-radius: 1.5rem;
+    position: fixed;
+    top: 5rem;
+    bottom: 5rem;
+    left: 5rem;
+    width: 300px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Start off-screen to the left */
+    z-index: 1000;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.side-container.show {
+    display: flex; /* Show the container and apply flex layout */
+    transform: translateX(0); /* Slide in */
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chat input container positioned at the bottom */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 5px;
+    background-color: #ffffff;
+    margin-top: auto; /* Pushes chat input to the bottom */
+}
+
+#message-input {
+    flex: 1;
+    border: none;
+    padding: 2px;
+    font-size: 16px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+#send-button {
+    background-color: #76b8e8;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 10px; /* Adds space between input and button */
+}
+
+#send-button:hover {
+    background-color: #044e43;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 10px;
+    word-break: break-word;
+    white-space: pre-wrap;
+    max-width: 75%;
+}
+
+.outgoing {
+    background-color: #159eff;
+    color: #000;
+    align-self: flex-end;
+}
+
+.incoming {
+    background-color: #ebebeb;
+    color: #000;
+    align-self: flex-start;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.send {
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+}
+
+
+.send:hover {
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+}
+
+

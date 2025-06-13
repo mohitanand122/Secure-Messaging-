@@ -1,0 +1,123 @@
+/* External CSS file for Proton Drive Login */
+
+/* Body styling */
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: mediumseagreen;
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.2), rgba(117, 19, 93, 0.1)),url("https://wallpapercave.com/wp/wp6752174.jpg")  ;
+    background-position: center;
+    background-size: 190vh ;
+
+}
+
+/* Background and layout */
+
+
+/* Login container styling */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 24rem;
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+    color: aliceblue;
+    border-radius: 10px;
+    padding:30px 40px;
+    font-weight: bold;
+}
+
+/* Logo and project title */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+.project-title {
+    color: #00ff28;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    color: #00ff28;
+    margin-bottom: 0.5rem;
+    /* font-family: 'Brush Script MT', cursive; */
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #1f2937;
+    color: white;
+    border: 1px solid #374151;
+    border-radius: 0.25rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #6b46c1;
+}
+
+/* Button styling */
+.btn-disabled {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #0cb9a5;
+    color: #ffffff;
+    border-radius: 0.25rem;
+    cursor: not-allowed;
+    /* font-family: 'Brush Script MT', cursive; */
+}
+
+.btn-enabled {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #35e11a;
+    color: #000000;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* Footer links */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.link {
+    color: #ffffff;
+    text-decoration: none;
+    /* font-family: 'Brush Script MT', cursive; */
+}
+.link:hover{
+    text-decoration: underline;
+    color: #00ff28;
+}
+.btn-enabled:hover{
+    color: #ffffff;
+}

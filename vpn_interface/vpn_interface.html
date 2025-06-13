@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vpn_interface.css">
+    <title>VPN Connection</title>
+</head>
+<body>
+    <div class="ring"></div>
+    <div class="status">Connected</div>
+
+    
+    <div class="buttons-container">
+        <div class="buttons">
+            <button class="btn send" onclick="showContainer()">Send</button>
+        </div>
+    </div>
+    
+    <!-- Hidden container on the left -->
+    <div class="side-container" id="sideContainer">
+        <!-- Content for the side container goes here -->
+        <div class="chat-messages">
+            <!-- <div class="message outgoing"></div>
+            <div class="message incoming"></div> -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type a message..." >
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+<script src="vpn_interface.js"></script>
+
+</body>
+</html>

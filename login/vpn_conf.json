@@ -1,0 +1,18 @@
+{
+    "serverIP": "192.168.1.100", 
+    "port": 1194,
+    "protocol": "udp",
+    "encryption": {
+      "cipher": "AES-256-CBC",
+      "auth": "SHA512",
+      "keySize": 256
+    },
+    "authentication": {
+      "method": "certificate",
+      "caFile": "/path/to/ca.crt",
+      "certFile": "/path/to/client.crt",
+      "keyFile": "/path/to/client.key"
+    },
+    "timeout": 300
+  }
+  
